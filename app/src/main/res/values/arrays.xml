@@ -1,0 +1,6 @@
+<resources>
+    <string-array name="availability_options">
+        <item>Available | Hey Let Us Connect</item>
+        <!-- Add other options if necessary -->
+    </string-array>
+</resources>

@@ -4,4 +4,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="save_explore"><![CDATA[Save & Explore]]></string>
+    <string name="menu">Menu</string>
+    <string name="refine">Refine</string>
+    <string name="filter">Filter</string>
+    <string name="back">Back</string>
+
 </resources>
