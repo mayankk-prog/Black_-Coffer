@@ -1,0 +1,137 @@
+
+
+    <?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<!-- Toolbar -->
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="#0B3D91"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="@string/menu" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Howdy Mayank Bhatia !!"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/userLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dev Nagar, Sonipat"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="8dp" />
+
+    <ImageView
+        android:id="@+id/refineIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_refine"
+        android:contentDescription="@string/refine"
+        android:layout_gravity="end" />
+</androidx.appcompat.widget.Toolbar>
+
+<!-- Tab Layout -->
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:tabMode="fixed"
+    app:tabGravity="fill"
+    app:tabTextColor="@android:color/black"
+    app:tabSelectedTextColor="@android:color/white"
+    android:background="#0B3D91"
+    app:tabIndicatorColor="@android:color/white"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personal" />
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Services" />
+
+    <com.google.android.material.tabs.TabItem
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Businesses" />
+</com.google.android.material.tabs.TabLayout>
+
+<!-- Search Bar -->
+<androidx.appcompat.widget.SearchView
+    android:id="@+id/searchView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:queryHint="Search..."
+    android:background="@drawable/search_background"
+    app:layout_constraintTop_toBottomOf="@id/tabLayout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp"
+    android:iconifiedByDefault="false" />
+
+<!-- Filter Icon -->
+<ImageButton
+    android:id="@+id/filterIcon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/ic_filter"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    app:layout_constraintTop_toTopOf="@id/searchView"
+    app:layout_constraintBottom_toBottomOf="@id/searchView"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="@string/filter" />
+
+<!-- RecyclerView for User Profiles -->
+
+    <!-- Bottom Navigation -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavigation"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:menu="@menu/bottom_navigation_menu"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
